@@ -23,6 +23,6 @@ This is a script that occurs when a Drive is connected to a PC and I use it to b
    1. Add arguments: `-WindowStyle Hidden`
    
 4. If you want to log the script messages into a text file, use the following task action
-   1. Program/script: ***cmd***
+   1. Program/script: ***powershell***
    2. Add arguments: `powershell -WindowStyle Hidden -ExecutionPolicy Unrestricted -File "C:\Users\<Users>\Desktop\Backup\Backup_script.ps1" > "C:\Users\<Users>\Desktop\Backup\log\backup_log.txt"`
    
