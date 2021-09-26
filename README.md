@@ -17,12 +17,12 @@ This is a script that occurs when a Drive is connected to a PC and I use it to b
    1. Trigger: ***At log on***
    2. Action: ***Start a program***
    3. Program/script: ***powershell***
-   4. Arguments: `-ExecutionPolicy Unrestricted -File "<absolute_path>\Backup_script.ps1`
+   4. Arguments: `-ExecutionPolicy Unrestricted -File "C:\Backup_script.ps1`
 
 3. **(Optional)** If you want your script window to be hidden, use this argument  
    1. Add arguments: `-WindowStyle Hidden`
    
 4. If you want to log the script messages into a text file, use the following task action
    1. Program/script: ***cmd***
-   2. Add arguments: `/c powershell -WindowStyle Hidden -ExecutionPolicy Unrestricted -File "<absolute_path>\Backup_script.ps1" > "C:\backup_log.txt"`
+   2. Add arguments: `/c powershell -WindowStyle Hidden -ExecutionPolicy Unrestricted -File "C:\Backup_script.ps1" > "C:\backup_log.txt"`
    
