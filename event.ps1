@@ -39,7 +39,7 @@ do {
             write-host (get-date -format s) " Starting task in 3 seconds..."
             start-sleep -seconds 3
 
-            Start-Process "<absolute_path>\backup.bat"
+            robocopy <source> <destination> /E /Z /B /W:30 /R:1000000
 
         }
     }
