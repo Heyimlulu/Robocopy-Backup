@@ -1,8 +1,8 @@
 # Robocopy-Backup
 
-Powershell script for automatic background files backup on Windows when a USB Drive is connected
+Powershell script for automatic background files backup on Windows when a USB Drive is connected.
 
-This is a script I use to backup all my school courses files on my SSD to my Personal OneDrive Business Cloud Storage
+This is a script that occurs when a Drive is connected to a PC and I use it to backup all my school courses files from my SSD to my Personal OneDrive Business Cloud Storage.
 
 # Getting started
 
