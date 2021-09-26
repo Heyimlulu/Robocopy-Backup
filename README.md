@@ -2,7 +2,9 @@
 
 Powershell script for automatic background files backup on Windows when a USB Drive is connected.
 
-This is a script that occurs when a Drive is connected to a PC and I use it to backup all my school courses files from my SSD to my Personal OneDrive Business Cloud Storage.
+The script runs continuously as a background process, which you can start at system logon with the task scheduler. It will be notified whenever a new drive is connected and then do something. Since it is basically in standby most of the time, it shouldn't takes up much resources.
+
+I.E., I use this script to backup all of my school courses from my SSD to my Personal OneDrive Business Cloud Storage.
 
 # Getting started
 
@@ -26,3 +28,6 @@ This is a script that occurs when a Drive is connected to a PC and I use it to b
    1. Program/script: ***powershell***
    2. Add arguments: `powershell -WindowStyle Hidden -ExecutionPolicy Unrestricted -File "C:\Users\<Users>\Desktop\Backup\Backup_script.ps1" > "C:\Users\<Users>\Desktop\Backup\log\backup_log.txt"`
    
+# Aknowledgments
+
+- [mtone](https://superuser.com/questions/31881/is-it-possible-to-do-safe-usb-autorun-with-task-scheduler-on-windows-7/93751#93751) for the main script
