@@ -2,7 +2,7 @@
 
 Powershell script for automatic background files backup on Windows when a USB Drive is connected.
 
-The script runs continuously as a background process, which you can start at system logon with the task scheduler. It will be notified whenever a new drive is connected and then do something. Since it is basically in standby most of the time, it shouldn't takes up much resources.
+The script runs continuously as a background process, which you can start at system logon with the task scheduler. It will be notified whenever a new drive is connected and then do something.
 
 I.E., I use this script to backup all of my school courses from my SSD to my Personal OneDrive.
 
