@@ -19,16 +19,16 @@ I.E., I use this script to backup all of my school courses from my SSD to my Per
    1. Trigger: ***At log on***
    2. Action: ***Start a program***
    3. Program/script: ***powershell***
-   4. Arguments: `-ExecutionPolicy Unrestricted -File "C:\temp\Backup_script.ps1`
+   4. Arguments: `-ExecutionPolicy Unrestricted -File "C:\temp\RunBackup.ps1`
 
 3. **(Optional)** If you want your script window to be hidden, use this argument  
    1. Add arguments: `-WindowStyle Hidden`
    
 # E-Mail Authentification
 
-If you want to use Mail notification, you may run `PasswordEncryption.ps1` to store your password as a secure string.
+If you want to use Mail notification, you may run `EncryptPassword.ps1` to store your password as a secure string.
 
-Then in the `PasswordDecryption.ps1`, enter your username and the function will return a credential object.
+Then in the `decryptPassword.ps1`, enter your username and the function will return a credential object.
 
 Now you can pass your encrypted credentials after calling the `SendMail.ps1` function.
    
