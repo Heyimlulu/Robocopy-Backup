@@ -19,15 +19,19 @@ I.E., I use this script to backup all of my school courses from my SSD to my Per
    1. Trigger: ***At log on***
    2. Action: ***Start a program***
    3. Program/script: ***powershell***
-   4. Arguments: `-ExecutionPolicy Unrestricted -File "C:\Users\<Users>\Desktop\Backup\Backup_script.ps1`
+   4. Arguments: `-ExecutionPolicy Unrestricted -File "C:\temp\Backup_script.ps1`
 
 3. **(Optional)** If you want your script window to be hidden, use this argument  
    1. Add arguments: `-WindowStyle Hidden`
    
-4. If you want to log the script messages into a text file, use the following task action
-   1. Program/script: ***powershell***
-   2. Add arguments: `powershell -WindowStyle Hidden -ExecutionPolicy Unrestricted -File "C:\Users\<Users>\Desktop\Backup\Backup_script.ps1" > "C:\Users\<Users>\Desktop\Backup\log\backup_log.txt"`
+# E-Mail Authentification
+
+If you want to use Mail notification, you may run `PasswordEncryption.ps1` to store your password as a secure string.
+
+Then in the `PasswordDecryption.ps1`, enter your username and the function will return a credential object.
+
+Now you can pass your encrypted credentials after calling the `SendMail.ps1` function.
    
 # Aknowledgments
 
-- [mtone](https://superuser.com/questions/31881/is-it-possible-to-do-safe-usb-autorun-with-task-scheduler-on-windows-7/93751#93751) for the main script
+- [mtone](https://superuser.com/questions/31881/is-it-possible-to-do-safe-usb-autorun-with-task-scheduler-on-windows-7/93751#93751) for the *drive detection* event
