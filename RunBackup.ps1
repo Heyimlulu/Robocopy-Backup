@@ -43,9 +43,9 @@ do {
             
             $logFile = Get-Content C:\temp\robolog.txt
 
-            . .\Send-Mail.ps1
-            . .\Decrypt-Password.ps1
-            sendMail -from "<sender>" -to "<recipient>" -subject "<subject>" -body $logFile -credit $(passwordDecryption)
+            . .\SendMail.ps1
+            . .\DecryptPassword.ps1
+            sendMail -from "<sender>" -to "<recipient>" -subject "<subject>" -body $logFile -credit $(decryptPassword)
         }
     }
 

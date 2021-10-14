@@ -1,4 +1,4 @@
-﻿function passwordDecryption () {
+﻿function decryptPassword () {
     $username = "<username>"
     $pwdTxt = Get-Content "C:\temp\EncryptedPassword.txt"
     $securePwd = $pwdTxt | ConvertTo-SecureString 
