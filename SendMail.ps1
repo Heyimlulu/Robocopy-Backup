@@ -1,4 +1,4 @@
-﻿function sendMail() 
+function sendMail() 
 {
     param (
         [string]$from,
