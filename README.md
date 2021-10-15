@@ -15,22 +15,29 @@ I.E., I use this script to backup all of my school courses from my SSD to my Per
    2. `robocopy <source> <destination> /E /Z /B /W:30 /R:1000000"`
       1. Path of whatever task you want to do. 
 
-2. Save your script somewhere *(extension .ps1)*, then create a task in the **Task Scheduler** to have your script run in background
-   1. Trigger: ***At log on***
-   2. Action: ***Start a program***
-   3. Program/script: ***powershell***
-   4. Arguments: `-ExecutionPolicy Unrestricted -File "C:\temp\RunBackup.ps1`
+2. Save your script somewhere *(extension.ps1)*, then create a task in the **Task Scheduler** to have your script run in background
+   1. General: ***Run with highest privilege*** 
+   2. Trigger: ***At log on***
+   3. Action: ***Start a program***
+   4. Program/script: ***powershell***
+   5. Arguments: `-ExecutionPolicy Unrestricted -File "C:\temp\RunBackup.ps1`
 
 3. **(Optional)** If you want your script window to be hidden, use this argument  
    1. Add arguments: `-WindowStyle Hidden`
    
-# E-Mail Authentification
+# Email Authentification
 
-If you want to use Mail notification, you may run `EncryptPassword.ps1` to store your password as a secure string.
+First you need to convert your password as a secure string, simply run `EncryptPassword.ps1` and it will save your encrypted password into a text file from the specified path.
 
-Then in the `decryptPassword.ps1`, enter your username and the function will return a credential object.
+Your text file should look like this (shortened):
 
-Now you can pass your encrypted credentials after calling the `SendMail.ps1` function.
+```
+1000045da8c9ddf4w5ld6…..d3d447d26d740864122a0a5625
+```
+
+Now that your password is securely stored, when needed, you can read back the file and decrypt it back into a ‘Secure String’ object and add into a credential object by running the `decryptPassword.ps1` function script in `RunBackup.ps1`, don't forget to enter your username in the script.
+
+Now you can pass your credential object in the `SendMail.ps1` function script as *-credit*.
    
 # Aknowledgments
 
